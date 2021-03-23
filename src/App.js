@@ -34,13 +34,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={(typeof weather.main != "undefined") ?  ((weather.main.temp > 20) ? 'App warm' : 'App') : 'App'}>
       <main>
         <div className="search-box-container">
+          <h2 className="title">React Weather App</h2>
+          <label>Enter a Location:</label>
           <input 
             type="text" 
             className="search-input" 
-            placeholder="Search..."
             onChange={e => setQuery(e.target.value)} 
             value={query}
             onKeyPress={search}
@@ -55,8 +56,8 @@ function App() {
           </div>
 
           <div className="weather-container">
-        <div className="temp">{Math.round(weather.main.temp)}°c</div>
-            <div className="weather">Rain</div>
+        <div className="temp">{Math.round(weather.main.temp)}°</div>
+            <div className="weather">{weather.weather[0].main}</div>
           </div>
         </div>
         ) : ('')}
