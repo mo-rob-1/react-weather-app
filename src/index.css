@@ -5,54 +5,86 @@
 }
 
 .App {
-  background-image: url('./assets/cold-bg.jpeg');
-  background-size: cover;
-  background-position: bottom;
-  transition: 0.5 ease-out;
+  background-image: url('/src/assets/pexels-ruvim-3560044.jpg');
 }
 
 .App.warm {
-  background-image: url('./assets/warm-bg.jpeg');
+  background-image: url('/src/assets/pexels-andreas-wohlfahrt-2397361.jpg');
+}
+
+.App,
+.App.warm {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
 }
 
 main {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55));
-  padding: 1.5rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 2.4rem;
+  text-align: center;
 }
 
 .search-box-container {
   width: 100%;
-  margin: 0 0 75px;
+  margin: 0 0 45px;
+}
+
+.search-box-container label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .search-box-container .search-input {
   display: block;
   width: 100%;
   padding: 15px;
-
+  margin-top: .6rem;
+  font-size: 1rem;
   appearance: none;
   background: none;
   border: none;
   outline: none;
-
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.562);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
   transition: 0.4s ease;
 }
 
 .search-box-container .search-input:focus {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.863);
 } 
 
 .location-container .location {
-  color: white;
+  color: #fff;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -60,7 +92,7 @@ main {
 }
 
 .location-container .date {
-  color: white;
+  color: #fff;
   font-size: .9rem;
   text-align: center;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.16);
@@ -78,7 +110,7 @@ main {
   background-color: rgba(255, 255, 255, 0.219);
   border-radius: 10px;
   padding: 15px 25px;
-  color: white;
+  color: #fff;
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.16);
@@ -87,9 +119,15 @@ main {
 }
 
 .weather-container .weather {
-  color: white;
-  font-size: 3rem;
+  color: #fff;
+  font-size: 2rem;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.16);
   text-align: center;
   font-weight: bold;
+}
+
+@media (max-width: 414px) {
+  main {
+    min-width: 300px;
+  }
 }
