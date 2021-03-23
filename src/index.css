@@ -5,11 +5,11 @@
 }
 
 .App {
-  background-image: url('/src/assets/pexels-ruvim-3560044.jpg');
+  background-image: url('/src/assets/clouds.jpg');
 }
 
 .App.warm {
-  background-image: url('/src/assets/pexels-andreas-wohlfahrt-2397361.jpg');
+  background-image: url('/src/assets/clear-sky.jpg');
 }
 
 .App,
