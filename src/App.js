@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaCloudSun } from 'react-icons/fa';
 
 const api = {
   key: process.env.REACT_APP_API_KEY,
@@ -37,7 +38,7 @@ function App() {
     <div className={(typeof weather.main != "undefined") ?  ((weather.main.temp > 20) ? 'App warm' : 'App') : 'App'}>
       <main>
         <div className="search-box-container">
-          <h2 className="title">React Weather App</h2>
+          <h2 className="title">React Weather App <FaCloudSun className="cloudIcon"/></h2>
           <label>Enter a Location:</label>
           <input 
             type="text" 
