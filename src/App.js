@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaCloudSun } from 'react-icons/fa';
 
 const api = {
-  key: "aea747d8673e5dcc65261d040804dfae",
+  key: process.env.REACT_APP_API_KEY,
   base: "http://api.openweathermap.org/data/2.5/"
 }
 
